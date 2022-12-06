@@ -203,18 +203,37 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+    height: fit-content;
+    /* background-color: rebeccapurple; */
+    height: 30em;
 }
 
 .skill-card {
+    /* background-color: yellow; */
     transform: rotate3d(1, 1, 1, -45deg) translateY(calc(-100px * var(--i))) translateX(calc(60px * var(--i)));
     --text-color: rgb(101, 13, 136);
     color: var(--text-color);
     text-decoration: none;
     text-shadow: 1px 2px 2px var(--text-color);
     padding: 10px;
-    font-size: 20px;
-    height: 8em;
-    width: 16em;
+    font-size: 22px;
+    /* height: 8em; */
+    /* width: 16em; */
+    width: clamp(10em, 16em, 50em);
+    aspect-ratio: 2/1;
+    transition: all 1s ease;
+    position: relative;
+}
+.skill-card div:nth-child(2){
+    /* background-color: red; */
+    font-size: 15px;
+    padding: 10px;
+    transform-style: preserve-3d;
+}
+.skill-card:hover{
+    /* box-shadow: 0px 0px 50px white; */
+    background-color: rgba(0, 0, 0, 0.37);
 }
 
 .skill-card img {
@@ -228,15 +247,33 @@ nav ul li a:hover {
     padding-inline-start: 30px;
 }
 
+
+
+
+
+
+/* FOOTER STYLING */
 footer {
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     justify-content: space-between;
+    overflow-x: hidden;
+}
+footer a{
+    color: rgba(0, 0, 0, 0.692);
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgba(255, 255, 255, 0.281);
 }
 
 footer div:first-child:first-child{
     margin-left: -10px;
 }
 
+.pages , .contact-details, .project-list{
+    padding: 10px;
+}
