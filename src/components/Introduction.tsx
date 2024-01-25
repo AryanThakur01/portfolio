@@ -11,7 +11,7 @@ const Introduction = () => {
         Frontend Web Developer
       </h1>
       <h2 className="md:text-center md:text-2xl text-xl text-muted-foreground max-w-[72rem] mx-auto">
-        I'm Aryan Thakur, a web developer passionate about crafting
+        I&apos;m Aryan Thakur, a web developer passionate about crafting
         user-friendly digital experiences. Explore my portfolio for a glimpse
         into my world, where simplicity meets functionality.
       </h2>
