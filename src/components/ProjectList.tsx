@@ -14,11 +14,11 @@ const ProjectList = () => {
           link: "https://dsa.aryanthakur.me/",
           image: assets.DsaVisualizer,
         },
-        // {
-        //   projectName: "E-Commerce Website",
-        //   link: "https://ecom.aryanthakur.me/",
-        //   image: assets.DsaVisualizer,
-        // },
+        {
+          projectName: "E-Commerce Website",
+          link: "https://shopicom.aryanthakur.me/",
+          image: assets.Shopicom,
+        },
       ],
     },
     {
