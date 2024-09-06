@@ -11,12 +11,12 @@ const ProjectList = () => {
       list: [
         {
           projectName: "DSA Visualizer",
-          link: "https://dsa.aryanthakur.me/",
+          link: "https://dsa.aryanthakur.tech/",
           image: assets.DsaVisualizer,
         },
         {
           projectName: "E-Commerce Website",
-          link: "https://shopicom.aryanthakur.me/",
+          link: "https://shopicom.aryanthakur.tech/",
           image: assets.Shopicom,
         },
       ],
