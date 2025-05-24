@@ -6,16 +6,18 @@ import { buttonVariants } from "./ui/button";
 
 const Nav = () => {
   return (
-    <nav className="border-b border-border sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto py-4 flex justify-between">
-        <Link href="/#intro" className="font-bold my-auto">
-          Aryan
-        </Link>
-        <ul className="flex gap-4 container text-muted-foreground items-center">
-          <PageLink link="/#skills" text="My Skills" />
-          <PageLink link="/#projects" text="Projects" />
-        </ul>
-        <ul className="flex gap-2">
+    <nav className="sticky top-0 ">
+      <div className="container mx-auto py-2 flex justify-between ">
+        <div className="flex border border-b-2 px-4 rounded-xl z-50 bg-background/20 backdrop-blur-xl gap-4">
+          <Link href="/#intro" className="font-bold my-auto">
+            Aryan
+          </Link>
+          <ul className="flex gap-4 container text-muted-foreground items-center px-0">
+            <PageLink link="/#skills" text="My Skills" />
+            <PageLink link="/#projects" text="Projects" />
+          </ul>
+        </div>
+        <ul className="flex gap-2 border border-b-2 px-4 rounded-xl z-50 bg-background/20 backdrop-blur-xl">
           <ButtonLink
             link="https://github.com/AryanThakur01/"
             icon={<Github size={16} />}
