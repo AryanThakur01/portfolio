@@ -1,8 +1,8 @@
 import React from "react";
-import ContainerSection from "./ContainerSection";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "./Container";
 
 const ProjectList = () => {
   const projectList = [
@@ -43,7 +43,7 @@ const ProjectList = () => {
     },
   ];
   return (
-    <ContainerSection id="projects">
+    <Container.Section id="projects">
       <h2 className="md:text-center md:text-4xl text-2xl font-bold my-8">
         My <span className="text-primary">Projects</span>
       </h2>
@@ -72,7 +72,7 @@ const ProjectList = () => {
           </div>
         </div>
       ))}
-    </ContainerSection>
+    </Container.Section>
   );
 };
 
