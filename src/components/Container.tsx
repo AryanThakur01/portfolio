@@ -1,14 +1,31 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import React, { FC, ReactNode } from "react";
+import React, { CSSProperties, FC, ReactNode, useEffect, useRef, useState } from "react";
+import { useScrollContext } from "./MainContainer";
 
 interface IContainerSection {
   children: ReactNode;
   className?: string;
   id?: string;
+  style?: CSSProperties;
 }
-const ContainerSection: FC<IContainerSection> = ({ children, className, id }) => {
+const ContainerSection: FC<IContainerSection> = ({ children, className, id, style }) => {
+  const [multiplier, setMultiplier] = useState(1);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const scroll = useScrollContext();
+  useEffect(() => {
+    if (sectionRef.current) {
+      setMultiplier((sectionRef.current.offsetTop + sectionRef.current.clientHeight - scroll) / sectionRef.current.clientHeight);
+    }
+  }, [scroll]);
   return (
-    <section className={cn("container mx-auto min-h-screen", className)} id={id}>
+    <section
+      className={cn("container mx-auto min-h-screen relative", className)}
+      id={id}
+      ref={sectionRef}
+      style={{ transform: `rotateY(${-(multiplier * 90) + 90}deg)`, ...style }}
+    >
       {children}
     </section>
   );

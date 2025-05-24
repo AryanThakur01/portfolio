@@ -1,3 +1,4 @@
+"use client";
 import { Experience, IExperienceSection } from "@/components/Experience";
 import Introduction from "@/components/Introduction";
 import { MainContainer } from "@/components/MainContainer";
@@ -65,8 +66,9 @@ const projects: IExperienceSection[] = [
 export default function Home() {
   return (
     <MainContainer className="text-white">
-      <Introduction />
+      <Introduction zIndex={1} />
       <Experience
+        zIndex={2}
         experiences={experiences}
         header={
           <>
@@ -75,6 +77,7 @@ export default function Home() {
         }
       />
       <Experience
+        zIndex={3}
         experiences={projects}
         header={
           <>

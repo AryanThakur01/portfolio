@@ -19,10 +19,11 @@ export interface IExperienceSection {
 interface IExperience {
   experiences: IExperienceSection[];
   header: React.ReactNode;
+  zIndex: number;
 }
-export const Experience: React.FC<IExperience> = ({ experiences, header }) => {
+export const Experience: React.FC<IExperience> = ({ experiences, header, zIndex }) => {
   return (
-    <Container.Section>
+    <Container.Section style={{ zIndex }} className="bg-black">
       <Container.Header className="text-white/70">{header}</Container.Header>
       <div className="flex flex-col gap-4">
         {experiences.map((exp, index) => (
