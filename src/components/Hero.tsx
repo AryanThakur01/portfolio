@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import { assets } from "@/assets/assets";
 
 const Hero: React.FC = () => {
   return (
@@ -66,17 +67,11 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
+          <div className="md:w-1/2 order-1 md:order-2 flex justify-center -translate-y-8 md:translate-y-0">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-space-blue via-space-purple to-space-pink opacity-20 animate-pulse" />
               <div className="relative rounded-full overflow-hidden border-2 border-white/10 backdrop-blur-sm">
-                <Image
-                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=750&h=750&dpr=2"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                  height={400}
-                  width={400}
-                />
+                <Image src={assets.Profile.src} alt="Profile" className="w-full h-full object-cover" height={400} width={400} />
               </div>
             </div>
           </div>

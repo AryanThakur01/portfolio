@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, ExternalLink, MapPin } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
 
 export interface IExperienceSection {
   start: string;

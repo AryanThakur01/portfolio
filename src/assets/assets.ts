@@ -3,6 +3,7 @@ import BBPM from "./bbpm.png";
 import Renovate from "./renovate.png";
 import Compositech from "./Compositech.png";
 import Shopicom from "./shopicom.png";
+import Profile from "./profile.jpeg";
 
 export const assets = {
   DsaVisualizer,
@@ -10,4 +11,5 @@ export const assets = {
   Renovate,
   Compositech,
   Shopicom,
+  Profile,
 };

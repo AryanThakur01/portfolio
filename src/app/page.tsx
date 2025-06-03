@@ -24,6 +24,14 @@ const experiences: IExperienceSection[] = [
     links: { type: "experience", web: "https://www.devneural.com/" },
   },
   {
+    start: "Oct 2023",
+    end: "Dec 2023",
+    company: "Freelancing",
+    role: "Software Engineer",
+    implemented: ["Next.Js", "Fronted Development", "Typescript", "React.JS", "Shopify", "WordPress"],
+    links: { type: "experience", web: "https://www.arterns.in/" },
+  },
+  {
     start: "Jun 2023",
     end: "Sep 2023",
     company: "Arterns Technologies",
