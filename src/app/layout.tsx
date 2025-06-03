@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
+import { ThemeProvider } from "@/context/theme-provider";
+import { Nav } from "@/components/Nav";
 
 const quickSand = Quicksand({
   subsets: ["latin"],
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={quickSand.className}>
-        <Nav />
-        {children}
+        <ThemeProvider>
+          <Nav />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
