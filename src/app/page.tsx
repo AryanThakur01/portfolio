@@ -1,5 +1,5 @@
 import Contact from "@/components/Contact";
-import { IExperienceSection } from "@/components/Experience";
+import Experience, { IExperienceSection } from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -47,6 +47,7 @@ export default function Home() {
           <main>
             <Hero />
             <About />
+            <Experience experiences={experiences} />
             <Projects />
             <Skills />
             <Contact />

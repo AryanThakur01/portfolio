@@ -16,17 +16,16 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    try {
-      e.preventDefault();
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      await fetch("/api/mail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-    } catch (error) {}
+    e.preventDefault();
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    await fetch("/api/mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    alert("Message sent successfully I'll get back to you soon!");
   };
 
   return (
