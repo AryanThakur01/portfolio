@@ -44,7 +44,7 @@ const experiences: IExperienceSection[] = [
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen bg-dark text-white">
+      <div className="min-h-screen bg-dark text-white overflow-x-hidden">
         <div
           className="fixed inset-0  bg-cover bg-center opacity-10 pointer-events-none"
           style={{
