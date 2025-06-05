@@ -16,7 +16,7 @@ const About: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Who am I?</h3>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              I&apos;m a passionate web developer with expertise in creating responsive, user-friendly websites and applications. With a
+              I&apos;m a passionate software developer with expertise in creating responsive, user-friendly websites and applications. With a
               background in both design and development, I bridge the gap between aesthetics and functionality.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
