@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -51,21 +52,21 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
 
             <nav className="flex flex-wrap justify-center space-x-4 md:space-x-6">
-              <a href="#home" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              <Link href="#home" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
                 Home
-              </a>
-              <a href="#about" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              </Link>
+              <Link href="#about" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
                 About
-              </a>
-              <a href="#projects" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              </Link>
+              <Link href="#projects" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
                 Projects
-              </a>
-              <a href="#skills" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              </Link>
+              <Link href="#skills" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
                 Skills
-              </a>
-              <a href="#contact" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              </Link>
+              <Link href="#contact" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
                 Contact
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

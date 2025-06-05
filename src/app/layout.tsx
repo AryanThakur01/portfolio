@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
 import { Nav } from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const quickSand = Quicksand({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Nav />
           {children}
+          <Footer />
           <Analytics />
         </ThemeProvider>
       </body>
