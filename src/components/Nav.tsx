@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/context/theme-provider";
+import { cn } from "@/lib/utils";
 
 interface NavLink {
   name: string;
@@ -34,11 +35,11 @@ export const Nav: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
         scrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md py-3" : "dark:bg-transparent py-5 bg-white"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 z-50 relative">
         <div className="flex items-center justify-between">
           <a href="#home" className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
             Portfolio
@@ -86,7 +87,12 @@ export const Nav: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 shadow-lg py-4 px-4 transition-all duration-300">
+        <div
+          className={cn(
+            "md:hidden absolute top-0 z-40 left-0 right-0 bg-white dark:bg-gray-900/80 backdrop-blur-2xl shadow-lg py-4 px-4 transition-all duration-300",
+            scrolled ? "pt-16" : "pt-20"
+          )}
+        >
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a

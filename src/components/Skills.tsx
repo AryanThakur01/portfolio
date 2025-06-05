@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, PaintBucket, Server, Settings, Layers, LineChart } from "lucide-react";
+import { Code, PaintBucket, Server, Settings, Layers, LineChart, Database, Layout, Cpu, Wrench, Boxes } from "lucide-react";
 
 interface Skill {
   name: string;
@@ -15,64 +15,77 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     name: "Frontend Development",
-    icon: <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
+    icon: <Layout className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
     skills: [
-      { name: "HTML/CSS", category: "frontend" },
+      { name: "HTML", category: "frontend" },
+      { name: "CSS", category: "frontend" },
       { name: "JavaScript", category: "frontend" },
-      { name: "React", category: "frontend" },
       { name: "TypeScript", category: "frontend" },
+      { name: "React", category: "frontend" },
+      { name: "Tailwind CSS", category: "frontend" },
     ],
   },
   {
     name: "Backend Development",
-    icon: <Server className="w-6 h-6 text-green-600 dark:text-green-400" />,
+    icon: <Cpu className="w-6 h-6 text-green-600 dark:text-green-400" />,
     skills: [
       { name: "Node.js", category: "backend" },
       { name: "Express", category: "backend" },
-      { name: "MongoDB", category: "backend" },
-      { name: "SQL", category: "backend" },
+      { name: "FastAPI", category: "backend" },
+      { name: "Python", category: "backend" },
     ],
   },
   {
-    name: "Design",
-    icon: <PaintBucket className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
+    name: "Databases",
+    icon: <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
     skills: [
-      { name: "UI/UX Design", category: "design" },
-      { name: "Figma", category: "design" },
-      { name: "Responsive Design", category: "design" },
-      { name: "Color Theory", category: "design" },
+      { name: "PostgreSQL", category: "database" },
+      { name: "MongoDB", category: "database" },
+      { name: "Supabase", category: "database" },
+      { name: "Redis", category: "database" },
     ],
   },
   {
-    name: "Tools & Others",
-    icon: <Settings className="w-6 h-6 text-orange-600 dark:text-orange-400" />,
+    name: "DevOps & Tooling",
+    icon: <Wrench className="w-6 h-6 text-orange-600 dark:text-orange-400" />,
     skills: [
-      { name: "Git/GitHub", category: "tools" },
-      { name: "Docker", category: "tools" },
-      { name: "CI/CD", category: "tools" },
-      { name: "AWS", category: "tools" },
+      { name: "Git & GitHub", category: "devops" },
+      { name: "Docker", category: "devops" },
+      { name: "CI/CD (GitHub Actions)", category: "devops" },
+      { name: "AWS", category: "devops" },
+      { name: "Linux", category: "devops" },
+      { name: "Vim", category: "devops" },
+    ],
+  },
+  {
+    name: "Blockchain & Web3",
+    icon: <Boxes className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />,
+    skills: [
+      { name: "Web3.js", category: "blockchain" },
+      { name: "Solidity", category: "blockchain" },
     ],
   },
 ];
 
+
+const categoryStyles: Record<string, string> = {
+  frontend: "bg-blue-100/10 text-blue-400",
+  backend: "bg-green-100/10 text-green-400",
+  database: "bg-purple-100/10 text-purple-400",
+  devops: "bg-orange-100/10 text-orange-400",
+  blockchain: "bg-yellow-100/10 text-yellow-400",
+};
+
 const SkillItem: React.FC<{ skill: Skill }> = ({ skill }) => {
+  const baseStyle = "px-4 py-2 rounded-lg text-sm font-medium transition-all";
+  const categoryStyle = categoryStyles[skill.category] || "bg-gray-100/10 text-gray-400";
+
   return (
-    <div
-      className={`px-4 py-2 rounded-lg ${
-        skill.category === "frontend"
-          ? "bg-blue-100/10 text-blue-400"
-          : skill.category === "backend"
-            ? "bg-green-100/10 text-green-400"
-            : skill.category === "design"
-              ? "bg-purple-100/10 text-purple-400"
-              : "bg-orange-100/10 text-orange-400"
-      }`}
-    >
+    <div className={`${baseStyle} ${categoryStyle}`}>
       {skill.name}
     </div>
   );
 };
-
 const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 bg-dark text-white transition-colors duration-300">
