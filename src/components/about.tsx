@@ -1,6 +1,7 @@
 import React from "react";
 import { User, Calendar, MapPin, Briefcase } from "lucide-react";
 import Image from "next/image";
+import { assets } from "@/assets/assets";
 
 const About: React.FC = () => {
   return (
@@ -62,7 +63,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gray-100 dark:bg-gray-800 rounded-lg -z-10 transform -rotate-3"></div>
             <Image
-              src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src={assets.Laptop.src}
               alt="About me"
               className="rounded-lg shadow-lg w-full transform rotate-3 transition-transform duration-500 hover:rotate-0"
               width={200}

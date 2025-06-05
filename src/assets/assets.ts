@@ -4,6 +4,7 @@ import Renovate from "./renovate.png";
 import Compositech from "./Compositech.png";
 import Shopicom from "./shopicom.png";
 import Profile from "./profile.jpeg";
+import Laptop from "./laptop.jpg";
 
 export const assets = {
   DsaVisualizer,
@@ -12,4 +13,5 @@ export const assets = {
   Compositech,
   Shopicom,
   Profile,
+  Laptop,
 };
