@@ -14,39 +14,6 @@ interface Project {
   githubLink: string;
 }
 
-// const projects: IExperienceSection[] = [
-//   {
-//     start: "Oct 2023",
-//     end: "Jan 2024",
-//     role: "DSA Visualizer",
-//     implemented: ["Blockchain", "Typescript", "AWS", "KaiOS"],
-//     links: {
-//       type: "project",
-//       web: "https://dsa.aryanthakur.tech",
-//       github: "https://github.com/AryanThakur01/DSA_Visualizer",
-//     },
-//   },
-//   {
-//     start: "Jan 2024",
-//     end: "May 2024",
-//     role: "Multi Vendor E-Commerce platform",
-//     implemented: ["Next.Js", "Fronted Development", "Supabase", "Typescript"],
-//     links: {
-//       type: "project",
-//       github: "https://github.com/AryanThakur01/Shopicom",
-//     },
-//   },
-//   {
-//     start: "Aug 2023",
-//     end: "Sep 2023",
-//     role: "Custom Text Editor (Vim based)",
-//     implemented: ["Next.Js", "Fronted Development", "Typescript", "React.JS"],
-//     links: {
-//       type: "project",
-//       github: "https://github.com/AryanThakur01/VimVerse",
-//     },
-//   },
-// ];
 
 const projects: Project[] = [
   {
@@ -61,9 +28,9 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Shopicom",
-    description: "A multi-vendor e-commerce platform built with Next.js and Supabase.",
+    description: "A multi-vendor e-commerce platform built in Nextjs with Typescript.",
     image: assets.Shopicom.src,
-    tags: ["Next.js", "Supabase", "TypeScript"],
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "drizzle ORM"],
     // demoLink: "https://shopicom.aryanthakur.tech",
     githubLink: "https://github.com/AryanThakur01/Shopicom",
   },
