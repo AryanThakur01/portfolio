@@ -15,7 +15,7 @@ const experiences: IExperienceSection[] = [
     links: { type: "experience", web: "https://www.blinkertechnology.com" },
   },
   {
-    start: "Jan 2024",
+    start: "Apr 2024",
     end: "May 2024",
     company: "Devneural Solutions",
     role: "Full-Stack Developer",
@@ -24,7 +24,7 @@ const experiences: IExperienceSection[] = [
   },
   {
     start: "Oct 2023",
-    end: "Dec 2023",
+    end: "March 2024",
     company: "Freelancing",
     role: "Software Engineer",
     implemented: ["Next.Js", "Fronted Development", "Typescript", "React.JS", "Shopify", "WordPress"],
