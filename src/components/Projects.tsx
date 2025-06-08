@@ -12,8 +12,8 @@ interface Project {
   tags: string[];
   demoLink?: string;
   githubLink: string;
+  inProgress?: boolean;
 }
-
 
 const projects: Project[] = [
   {
@@ -33,6 +33,16 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "PostgreSQL", "drizzle ORM"],
     // demoLink: "https://shopicom.aryanthakur.tech",
     githubLink: "https://github.com/AryanThakur01/Shopicom",
+  },
+  {
+    id: 3,
+    title: "Trade Blocks",
+    description: "A Platform for creating and managing trading bots.",
+    image: assets.TradingBot.src,
+    tags: ["Python", "FastAPI", "PostgreSQL"],
+    // demoLink: "https://shopicom.aryanthakur.tech",
+    githubLink: "https://github.com/AryanThakur01/Trade-Blocks",
+    inProgress: true,
   },
 ];
 
@@ -57,6 +67,11 @@ const Projects: React.FC = () => {
               onMouseLeave={() => setHoveredId(null)}
             >
               <div className="relative overflow-hidden h-60">
+                {project.inProgress && (
+                  <div className="absolute top-0 right-0 bg-green-600 text-white text-md font-semibold px-2 py-1 rounded-bl-lg z-20">
+                    In Progress
+                  </div>
+                )}
                 <Image
                   src={project.image}
                   alt={project.title}

@@ -5,6 +5,7 @@ import Compositech from "./Compositech.png";
 import Shopicom from "./shopicom.png";
 import Profile from "./profile.jpeg";
 import Laptop from "./laptop.jpg";
+import TradingBot from "./trading-bot.jpg";
 
 export const assets = {
   DsaVisualizer,
@@ -14,4 +15,5 @@ export const assets = {
   Shopicom,
   Profile,
   Laptop,
+  TradingBot
 };
