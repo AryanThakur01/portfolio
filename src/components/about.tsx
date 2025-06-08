@@ -66,8 +66,8 @@ const About: React.FC = () => {
               src={assets.Laptop.src}
               alt="About me"
               className="rounded-lg shadow-lg w-full transform rotate-3 transition-transform duration-500 hover:rotate-0"
-              width={200}
-              height={200}
+              width={1080}
+              height={1080}
             />
           </div>
         </div>
