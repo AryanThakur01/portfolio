@@ -50,13 +50,13 @@ const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center">
-                <Briefcase className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
-                <div>
-                  <h4 className="text-sm text-gray-500 dark:text-gray-400">Availability</h4>
-                  <p className="text-gray-800 dark:text-gray-200 font-medium">Available for hire</p>
-                </div>
-              </div>
+              {/* <div className="flex items-center"> */}
+              {/*   <Briefcase className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" /> */}
+              {/*   <div> */}
+              {/*     <h4 className="text-sm text-gray-500 dark:text-gray-400">Availability</h4> */}
+              {/*     <p className="text-gray-800 dark:text-gray-200 font-medium">Available for hire</p> */}
+              {/*   </div> */}
+              {/* </div> */}
             </div>
           </div>
 
