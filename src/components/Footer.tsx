@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Aryan Thakur. All rights reserved.</p>
 
             <nav className="flex flex-wrap justify-center space-x-4 md:space-x-6">
               <Link href="#home" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
