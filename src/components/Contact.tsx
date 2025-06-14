@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 const Contact: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,16 +18,22 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    await fetch("/api/mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    alert("Message sent successfully I'll get back to you soon!");
+    setIsLoading(true);
+    try {
+      e.preventDefault();
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      await fetch("/api/mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      alert("Message sent successfully I'll get back to you soon!");
+    } catch (error) {
+      alert("Failed to send message. Please try again later.");
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -48,12 +56,12 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
-                  <a
+                  <Link
                     href="mailto:aryan197927@gmail.com"
                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   >
                     aryan197297@gmail.com
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -65,12 +73,12 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Phone</h3>
-                  <a
+                  <Link
                     href="tel:+918077002445"
                     className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300"
                   >
                     +91 8077002445
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -158,9 +166,19 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 flex items-center justify-center"
+                disabled={isLoading}
               >
-                Send Message
-                <Send className="ml-2 w-4 h-4" />
+                {isLoading ? (
+                  <>
+                    Sending.....
+                    <Loader2 className="animate-spin mr-2 w-4 h-4" />
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="ml-2 w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           </div>
