@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, ExternalLink, ArrowUpRight } from "lucide-react";
 import { useTheme } from "@/context/theme-provider";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -16,7 +16,7 @@ const navLinks: NavLink[] = [
   { name: "Projects", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
   { name: "Contact", href: "/#contact" },
-  { name: "Blogs", href: "/blogs" },
+  { name: "Blogs", href: "https://blogs.aryanthakur.dev" },
 ];
 
 export const Nav: React.FC = () => {
@@ -53,9 +53,12 @@ export const Nav: React.FC = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300"
+                target={link.name === "Blogs" ? "_blank" : undefined}
+                rel={link.name === "Blogs" ? "noopener noreferrer" : undefined}
+                className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300 flex items-center"
               >
                 {link.name}
+                {link.name === "Blogs" && <ArrowUpRight size={14} className="ml-1 relative top-[1px]" />}
               </Link>
             ))}
             <button
