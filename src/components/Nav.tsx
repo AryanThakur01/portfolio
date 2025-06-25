@@ -44,7 +44,7 @@ export const Nav: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 z-50 relative">
         <div className="flex items-center justify-between">
           <Link href="/#home" className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
-            Portfolio
+            Aryan
           </Link>
 
           {/* Desktop Navigation */}

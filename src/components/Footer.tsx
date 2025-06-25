@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white py-12 relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center mb-8">
-          <h3 className="text-2xl font-bold mb-4">Portfolio</h3>
+          <h3 className="text-2xl font-bold mb-4">Aryan</h3>
           <p className="text-gray-400 text-center max-w-lg mb-6">
             Creating beautiful, functional websites and applications with a focus on user experience and clean code.
           </p>
