@@ -31,7 +31,7 @@ const projects: Project[] = [
     description: "A multi-vendor e-commerce platform built in Nextjs with Typescript.",
     image: assets.Shopicom.src,
     tags: ["Next.js", "TypeScript", "PostgreSQL", "drizzle ORM"],
-    // demoLink: "https://shopicom.aryanthakur.tech",
+    demoLink: "https://shopicom.aryanthakur.dev",
     githubLink: "https://github.com/AryanThakur01/Shopicom",
   },
   {
