@@ -22,7 +22,7 @@ const projects: Project[] = [
     description: "An interactive tool to visualize data structures and algorithms in action.",
     image: assets.DsaVisualizer.src,
     tags: ["React", "TypeScript"],
-    demoLink: "https://dsa.aryanthakur.tech",
+    demoLink: "https://dsa.aryanthakur.dev",
     githubLink: "https://github.com/AryanThakur01/DSA_Visualizer",
   },
   {
